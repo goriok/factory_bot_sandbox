@@ -7,6 +7,7 @@ FactoryBot.define do
   end
 
   factory :user do 
-    initialize_with { new(generate :cpf) } 
+    cpf { generate :cpf }
+    name { "name" } 
   end
 end

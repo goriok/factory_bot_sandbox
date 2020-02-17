@@ -1,5 +1,3 @@
 class User
-  def initialize(cpf)  
-    @cpf = cpf  
-  end
+  attr_accessor :cpf, :name
 end
