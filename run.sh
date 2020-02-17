@@ -1,6 +1,8 @@
 #!/bin/bash
 
+echo 'start sandbox tests'
 docker run --rm --name mongo-sandbox -d mongo:latest
-sleep 5s
-ruby main.rb
-docker rm -f mongo-sandbox
+sleep 3s
+ruby main.rb || true
+docker rm -f mongo-sandbox || true
+echo 'finish sandbox tests'
