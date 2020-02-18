@@ -1,5 +1,4 @@
 require "factory_bot"
-require 'mongo'
 require 'json'
 
 include FactoryBot::Syntax::Methods

@@ -1,4 +1,3 @@
-
 require 'mongo'
 module Mongo
   class Base
