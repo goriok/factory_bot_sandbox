@@ -16,8 +16,11 @@ FactoryBot.define do
 
   to_create { |user| 
     db = Mongo::Base.new
+
+    # based on https://stackoverflow.com/questions/5030553/ruby-convert-object-to-hash
     hash = {}
     user.instance_variables.each {|var| hash[var.to_s.delete("@")] = user.instance_variable_get(var) }
+    
     db.insert(:user, hash) 
     db.close
   }
