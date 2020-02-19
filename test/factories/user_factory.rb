@@ -1,5 +1,4 @@
 require "factory_bot"
-require 'json'
 
 include FactoryBot::Syntax::Methods
 
